@@ -1,0 +1,156 @@
+--- 
+actions: 
+  - action_show_symptom_of_laryngitis_basis_of_age
+  - action_disease_laryngitis_conform
+  - action_feedback_database
+  - action_feedback_submit
+  - utter_feedback_submit
+  - utter_submit
+  - utter_ask_lname
+  - utter_ask_fname
+  - utter_ask_age
+  - utter_ask_location
+  - action_database_update
+  - utter_ask_symptoms
+  - action_disease_finder
+  - utter_goodbye
+  - utter_tell_capablity
+  - utter_ask_are_you_here_after_surgery
+  - Utter_ask_problem
+  - Utter_ask_how_long_have_you_fever
+  - utter_ask_how_high_does_the_fever_go
+  - utter_ask_do_you_have_any_of_these_respitory_problem
+  - utter_ask_do_you_have_any_of_these_problem_as_well_cough
+  - action_disease_cough_fever
+  - utter_ask_do_you_have_any_of_these_problem_as_well_body_ache
+  - action_disease_fever_dengu
+  - utter_ask_do_you_have_any_of_these_problem_as_well_headache
+  - action_disease_fever_meningitis
+  - utter_ask_do_you_have_any_of_these_problem_as_well_sore_throat
+  - action_disease_fever_pharyngitis
+  - action_show_symptom_of_flu_basis_of_age
+  - action_disease_flu_conform
+  - utter_ask_do_you_have_any_of_these_problem_as_well_flu
+  - utter_ask_do_you_have_any_of_these_problem_as_well_laryngitis
+entities: 
+  - fname
+  - lname
+  - age
+  - symp
+  - location
+intents: 
+  - laryngitis_cough
+  - feedback
+  - greet
+  - fname
+  - lname
+  - age_sal
+  - location
+  - symptoms
+  - goodbye
+  - health_issue
+  - affirm
+  - deny
+  - fever
+  - fever_less_than_week
+  - fever_temp
+  - cough
+  - cough_conform
+  - severe_body_ache
+  - severe_body_ache_conform
+  - headache
+  - headache_conform
+  - sore_throat
+  - sore_throat_conform
+  - flu_cough
+  - out_of_scope
+responses: 
+  utter_ask_affirmation: 
+    - 
+      text: "Did you mean?"
+  utter_ask_age: 
+    - 
+      text: "Please provide your age?"
+  utter_ask_are_you_here_after_surgery: 
+    - 
+      text: "Are you here after surgery (yes/no)?"
+  utter_ask_do_you_have_any_of_these_problem_as_well_body_ache: 
+    - 
+      text: "Do you have any of these problem as well? (Passing  much less urine,Feeling extremely lethargic/weak,Bleeding from any body part)"
+  utter_ask_do_you_have_any_of_these_problem_as_well_cough: 
+    - 
+      text: "Do you have any of these problem as well? (Breathlessness,Greenish coloured phlegm/sputum,Blood in sputum,Sound / noise in breathing)"
+  utter_ask_do_you_have_any_of_these_problem_as_well_flu: 
+    - 
+      text: "Do you have these below problem tell me in yes or no_flu"
+  utter_ask_do_you_have_any_of_these_problem_as_well_headache: 
+    - 
+      text: "do you have any of these problem as well? (Excessive sleepiness /  restlessness, Altered mental status,Stiffness of neck,Seizure/ fits)"
+  utter_ask_do_you_have_any_of_these_problem_as_well_laryngitis: 
+    - 
+      text: "Do you have these below problem tell me in yes or no_laryngtitis"
+  utter_ask_do_you_have_any_of_these_problem_as_well_sore_throat: 
+    - 
+      text: "do you have any of these problem as well? (Pain in swallowing,Drooling of saliva,Difficulty in speaking,Difficulty in opening mouth,Sound/Noise  in breathing)"
+  utter_ask_do_you_have_any_of_these_respitory_problem: 
+    - 
+      text: "Do you have any of these respitory problem? (cough, severe body ache, headache, sore throat)"
+  utter_ask_fname: 
+    - 
+      text: "Ok, Please provide your first name?"
+  utter_ask_how_high_does_the_fever_go: 
+    - 
+      text: "How high does the fever go? (more than 101, less than 101)"
+  utter_ask_how_long_have_you_fever: 
+    - 
+      text: "How long have you fever? (like from past 1 week, past two days)"
+  utter_ask_lname: 
+    - 
+      text: "Please provide your last name?"
+    - 
+      text: "Tell me your last name"
+  utter_ask_location: 
+    - 
+      text: "Please provide your location"
+  utter_ask_problem: 
+    - 
+      text: "please type here, health issues you are facing(like fever)?"
+  utter_ask_rephrase: 
+    - 
+      text: "Please rephrase again"
+  utter_ask_symptoms: 
+    - 
+      text: "Tell me your symptomps"
+  utter_default: 
+    - 
+      text: "Sorry, didn't understand. Please try again"
+  utter_feedback_submit: 
+    - 
+      text: "Please give your feedback"
+  utter_goodbye: 
+    - 
+      text: Bye
+  utter_submit: 
+    - 
+      text: "Your name is {fname} {lname}, age is {age} and location is {location}."
+  utter_tell_capablity: 
+    - 
+      text: "Hi I am here to provide you medical assistent. Please help me with your basic information"
+session_config: 
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots: 
+  age: 
+    type: float
+  disease: 
+    type: unfeaturized
+  feedback: 
+    type: unfeaturized
+  fname: 
+    type: unfeaturized
+  lname: 
+    type: unfeaturized
+  location: 
+    type: unfeaturized
+  symp: 
+    type: unfeaturized
